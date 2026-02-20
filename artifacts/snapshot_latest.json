@@ -1,0 +1,11 @@
+{
+  "balance_usdc": 990.0,
+  "equity": 1001.8574582150741,
+  "drawdown_pct": null,
+  "positions": {
+    "BTC_100K_MAR": {
+      "shares": 15.76789656259855
+    }
+  },
+  "fills_count": 1
+}

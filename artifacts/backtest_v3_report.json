@@ -1,0 +1,392 @@
+{
+  "settings": {
+    "LIVE_MODE": false,
+    "LIVE_ARM_REQUIRED": true,
+    "LIVE_ARM_TIMEOUT_SEC": 60,
+    "POLYGON_CHAIN_ID": 137,
+    "RPC_REQUIRE_HTTPS": true,
+    "PAPER_START_USDC": 1000.0,
+    "LOG_LEVEL": "INFO",
+    "BACKTEST_SYNTH_N": 20000,
+    "BACKTEST_DEBUG_GATES": true,
+    "BACKTEST_RUN_SANITY": true,
+    "BACKTEST_METRIC_STRIDE": 5,
+    "BACKTEST_FORCE_CLOSE_EOD": true,
+    "BACKTEST_RUN_ABLATION": true,
+    "BACKTEST_SIGNAL_THRESHOLD": 0.5,
+    "BACKTEST_AUTO_CALIBRATE": true,
+    "BACKTEST_CALIB_HURST_Q": 0.6,
+    "BACKTEST_CALIB_ENTROPY_Q": 0.8,
+    "BACKTEST_CALIB_LLE_Q": 0.8,
+    "BACKTEST_CALIB_ON_SIGNAL_ONLY": true,
+    "BACKTEST_CALIB_MIN_SAMPLES": 200,
+    "BACKTEST_PRECOMPUTE_METRICS": true,
+    "BACKTEST_RUN_WALKFORWARD": false,
+    "BACKTEST_WF_CALIB_FRAC": 0.4,
+    "BACKTEST_SAVE_REPORT": ".\\\\artifacts\\\\backtest_v3_report.json",
+    "BACKTEST_DEBUG_INDICATOR_STATS": true,
+    "BACKTEST_DEBUG_SAMPLE_MAX": 50000,
+    "BINANCE_SYMBOLS": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "BINANCE_WS_URL": "wss://stream.binance.com:9443/stream",
+    "BINANCE_REST_URL": "https://api.binance.com",
+    "HISTORY_MAXLEN": 2400,
+    "POLY_GAMMA_BASE": "https://gamma-api.polymarket.com",
+    "POLY_CLOB_BASE": "https://clob.polymarket.com",
+    "POLY_WSS_MARKET": "wss://ws-subscriptions-clob.polymarket.com/ws/market",
+    "POLY_WSS_USER": "wss://ws-subscriptions-clob.polymarket.com/ws/user",
+    "POLY_CHAIN_ID": 137,
+    "POLY_CTF_EXCHANGE": "0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E",
+    "POLY_NEG_RISK_EXCHANGE": "0xC5d563A36AE78145C45a50134d48A1215220f80a",
+    "POLY_USDC_E": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+    "POLY_CTF": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+    "POLYGON_RPC_URL": "https://polygon-rpc.com",
+    "POLY_PRIVATE_KEY": "",
+    "POLY_FUNDER_ADDRESS": "",
+    "POLY_SIGNATURE_TYPE": 0,
+    "POLY_API_KEY": "",
+    "POLY_API_SECRET": "",
+    "POLY_API_PASSPHRASE": "",
+    "MIN_EDGE": 0.05,
+    "MIN_TTE_SEC": 300,
+    "MAX_TTE_SEC": 900,
+    "MAX_POSITIONS": 3,
+    "COOLDOWN_SEC": 180,
+    "MARKET_MAKER_MODE": false,
+    "MM_USE_WSS": true,
+    "MM_MAX_ASSETS": 3,
+    "MM_USE_BATCH": true,
+    "MM_BATCH_MAX_ORDERS": 15,
+    "MM_MAX_TOKEN_IDS": 10,
+    "MM_REFRESH_SEC": 2.0,
+    "MM_ORDER_TTL_SEC": 25,
+    "MM_POST_ONLY": true,
+    "MM_ORDER_TYPE": "GTC",
+    "MM_GTD_LIFETIME_SEC": 180,
+    "MM_HALF_SPREAD_BPS": 25.0,
+    "MM_MIN_HALF_SPREAD_TICKS": 1,
+    "MM_ALPHA_IMB_K": 0.15,
+    "MM_ALPHA_MICRO_K": 0.75,
+    "MM_DEPTH_LEVELS": 10,
+    "MM_BASE_SIZE_SHARES": 40.0,
+    "MM_MAX_USDC_PER_ORDER": 50.0,
+    "MM_MAX_INV_USDC": 200.0,
+    "MM_INV_SKEW_BPS": 75.0,
+    "MM_INV_SIZE_SKEW": 0.8,
+    "MM_HEARTBEAT_SEC": 5.0,
+    "MAKER_FEE_BPS": 0,
+    "TAKER_FEE_BPS": 30,
+    "GAS_USDC_ESTIMATE": 0.1,
+    "RISK_PER_TRADE": 0.01,
+    "DRAWDOWN_CAP": 0.1,
+    "MAX_USDC_PER_TRADE": 50.0,
+    "SLIPPAGE_BPS_EST": 10.0,
+    "LEVY_ALPHA_MIN": 1.2,
+    "USE_ECONO": true,
+    "USE_HURST": true,
+    "USE_ENTROPY": true,
+    "USE_LLE": true,
+    "USE_TRANSFER_ENTROPY": false,
+    "USE_MFDFA_PROXY": true,
+    "HURST_MIN": 0.55,
+    "ENTROPY_MAX": 2.8,
+    "LLE_MAX": -0.001,
+    "CONTAGION_TE_MAX": 0.15,
+    "USE_SYMBOLIC_REGRESSION": true,
+    "SR_MAX_TERMS": 4,
+    "SR_LOOKBACK": 120,
+    "SR_HORIZON_SEC": 120,
+    "AMH_ENABLED": true,
+    "AMH_WINDOW": 30,
+    "AMH_EDGE_MULT_MIN": 0.8,
+    "AMH_EDGE_MULT_MAX": 1.6,
+    "BACKTEST_CSV": "",
+    "BACKTEST_SEED": 7
+  },
+  "meta": {
+    "price_rows": 20000,
+    "metric_cache_ms": 2707.279
+  },
+  "calibration": {
+    "label": "main",
+    "enabled": true,
+    "signal_only": true,
+    "signal_threshold": 0.5,
+    "sample_counts": {
+      "hurst": 13541,
+      "entropy": 13541,
+      "lle": 13541
+    },
+    "source_stats": {
+      "hurst": {
+        "count": 13541,
+        "min": -0.13785078859759248,
+        "p10": -0.004953709608358605,
+        "p50": 0.3631665815418989,
+        "p90": 0.5124704851653974,
+        "max": 0.6166314023517884,
+        "mean": 0.24830866506485802
+      },
+      "entropy": {
+        "count": 13541,
+        "min": 0.01234461837842467,
+        "p10": 0.3126580221738663,
+        "p50": 1.4127635794610505,
+        "p90": 2.717788831706908,
+        "max": 2.910553009076141,
+        "mean": 1.6560470116503239
+      },
+      "lle": {
+        "count": 13541,
+        "min": -8.966383840809332,
+        "p10": -5.481215954862465,
+        "p50": -2.8488676093483876,
+        "p90": -0.6376141159245927,
+        "max": -0.5867145954628152,
+        "mean": -2.5297594313619385
+      }
+    },
+    "old_thresholds": {
+      "HURST_MIN": 0.55,
+      "ENTROPY_MAX": 2.8,
+      "LLE_MAX": -0.001
+    },
+    "applied": true,
+    "new_thresholds": {
+      "HURST_MIN": 0.47294036550013296,
+      "ENTROPY_MAX": 2.6722405947484154,
+      "LLE_MAX": -0.6562097121866531
+    },
+    "reason": null,
+    "quantiles": {
+      "hurst": 0.6,
+      "entropy": 0.8,
+      "lle": 0.8
+    }
+  },
+  "runs": {
+    "filters_off": {
+      "trades": 57,
+      "entries": 57,
+      "exits": 57,
+      "open": 0,
+      "balance": 874.09293739709,
+      "sharpe": -3.715667614785042,
+      "debug_counts": {
+        "warmup": 900,
+        "regime_block": 0,
+        "signal_below_threshold": 5559,
+        "econ_filter_block": 0,
+        "position_open_no_reentry": 13484,
+        "entry_ok": 57,
+        "exit_ok": 57,
+        "metric_nan": 0,
+        "insufficient_balance": 0,
+        "forced_exit_eod": 0
+      },
+      "indicator_stats": {
+        "hurst": {
+          "count": 13541,
+          "min": -0.13785078859759248,
+          "p10": -0.004953709608358605,
+          "p50": 0.3631665815418989,
+          "p90": 0.5124704851653974,
+          "max": 0.6166314023517884,
+          "mean": 0.24830866506485802
+        },
+        "entropy": {
+          "count": 13541,
+          "min": 0.01234461837842467,
+          "p10": 0.3126580221738663,
+          "p50": 1.4127635794610505,
+          "p90": 2.717788831706908,
+          "max": 2.910553009076141,
+          "mean": 1.6560470116503239
+        },
+        "lle": {
+          "count": 13541,
+          "min": -8.966383840809332,
+          "p10": -5.481215954862465,
+          "p50": -2.8488676093483876,
+          "p90": -0.6376141159245927,
+          "max": -0.5867145954628152,
+          "mean": -2.5297594313619385
+        },
+        "mfd": {
+          "count": 13541,
+          "min": 1.1894916419788464,
+          "p10": 1.3571184923178308,
+          "p50": 1.5441247565572749,
+          "p90": 2.9077994852693534,
+          "max": 7.651493336158904,
+          "mean": 1.9005258835665448
+        }
+      }
+    },
+    "filters_on": {
+      "trades": 24,
+      "entries": 24,
+      "exits": 24,
+      "open": 0,
+      "balance": 998.0816994802117,
+      "sharpe": -0.1258261349938168,
+      "debug_counts": {
+        "warmup": 900,
+        "regime_block": 0,
+        "signal_below_threshold": 5559,
+        "econ_filter_block": 8122,
+        "position_open_no_reentry": 5395,
+        "entry_ok": 24,
+        "exit_ok": 24,
+        "metric_nan": 0,
+        "insufficient_balance": 0,
+        "forced_exit_eod": 0
+      },
+      "econ_block_reasons": {
+        "hurst_fail": 3797,
+        "entropy_fail": 0,
+        "lle_fail": 0,
+        "te_fail": 0,
+        "mfdfa_fail": 0,
+        "multi_fail": 4325
+      },
+      "indicator_stats": {
+        "hurst": {
+          "count": 13541,
+          "min": -0.13785078859759248,
+          "p10": -0.004953709608358605,
+          "p50": 0.3631665815418989,
+          "p90": 0.5124704851653974,
+          "max": 0.6166314023517884,
+          "mean": 0.24830866506485802
+        },
+        "entropy": {
+          "count": 13541,
+          "min": 0.01234461837842467,
+          "p10": 0.3126580221738663,
+          "p50": 1.4127635794610505,
+          "p90": 2.717788831706908,
+          "max": 2.910553009076141,
+          "mean": 1.6560470116503239
+        },
+        "lle": {
+          "count": 13541,
+          "min": -8.966383840809332,
+          "p10": -5.481215954862465,
+          "p50": -2.8488676093483876,
+          "p90": -0.6376141159245927,
+          "max": -0.5867145954628152,
+          "mean": -2.5297594313619385
+        },
+        "mfd": {
+          "count": 13541,
+          "min": 1.1894916419788464,
+          "p10": 1.3571184923178308,
+          "p50": 1.5441247565572749,
+          "p90": 2.9077994852693534,
+          "max": 7.651493336158904,
+          "mean": 1.9005258835665448
+        }
+      },
+      "effective_thresholds": {
+        "HURST_MIN": 0.47294036550013296,
+        "ENTROPY_MAX": 2.6722405947484154,
+        "LLE_MAX": -0.6562097121866531
+      }
+    },
+    "sanity": {
+      "trades": 64,
+      "balance": 975.191275111194,
+      "sharpe": -0.6032955511687954,
+      "debug_counts": {
+        "warmup": 900,
+        "regime_block": 0,
+        "signal_below_threshold": 0,
+        "econ_filter_block": 0,
+        "position_open_no_reentry": 19036,
+        "entry_ok": 64,
+        "exit_ok": 64,
+        "metric_nan": 0,
+        "insufficient_balance": 0,
+        "forced_exit_eod": 0
+      }
+    }
+  },
+  "ablation": {
+    "HURST_ONLY": {
+      "trades": 24,
+      "balance": 998.0816994802117,
+      "sharpe": -0.1258261349938168,
+      "econ_block_reasons": {
+        "hurst_fail": 8122,
+        "entropy_fail": 0,
+        "lle_fail": 0,
+        "te_fail": 0,
+        "mfdfa_fail": 0,
+        "multi_fail": 0
+      },
+      "thresholds": {
+        "HURST_MIN": 0.47294036550013296,
+        "ENTROPY_MAX": 2.6722405947484154,
+        "LLE_MAX": -0.6562097121866531
+      }
+    },
+    "ENTROPY_ONLY": {
+      "trades": 51,
+      "balance": 928.5930041106914,
+      "sharpe": -2.2443433699058315,
+      "econ_block_reasons": {
+        "hurst_fail": 0,
+        "entropy_fail": 2708,
+        "lle_fail": 0,
+        "te_fail": 0,
+        "mfdfa_fail": 0,
+        "multi_fail": 0
+      },
+      "thresholds": {
+        "HURST_MIN": 0.47294036550013296,
+        "ENTROPY_MAX": 2.6722405947484154,
+        "LLE_MAX": -0.6562097121866531
+      }
+    },
+    "LLE_ONLY": {
+      "trades": 52,
+      "balance": 919.2792162794607,
+      "sharpe": -2.5537275805503357,
+      "econ_block_reasons": {
+        "hurst_fail": 0,
+        "entropy_fail": 0,
+        "lle_fail": 2706,
+        "te_fail": 0,
+        "mfdfa_fail": 0,
+        "multi_fail": 0
+      },
+      "thresholds": {
+        "HURST_MIN": 0.47294036550013296,
+        "ENTROPY_MAX": 2.6722405947484154,
+        "LLE_MAX": -0.6562097121866531
+      }
+    },
+    "H_E_L": {
+      "trades": 24,
+      "balance": 998.0816994802117,
+      "sharpe": -0.1258261349938168,
+      "econ_block_reasons": {
+        "hurst_fail": 3797,
+        "entropy_fail": 0,
+        "lle_fail": 0,
+        "te_fail": 0,
+        "mfdfa_fail": 0,
+        "multi_fail": 4325
+      },
+      "thresholds": {
+        "HURST_MIN": 0.47294036550013296,
+        "ENTROPY_MAX": 2.6722405947484154,
+        "LLE_MAX": -0.6562097121866531
+      }
+    }
+  }
+}
